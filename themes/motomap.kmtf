@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GARMIN_MAP_THEME>
+
+  <METADATA>
+    <TITLE>Motomap Theme</TITLE>
+    <DESCRIPTION>Motomap Theme</DESCRIPTION>
+    <CREATOR>mark@cushman.net</CREATOR>
+    <Version>
+      <Major>1</Major>
+      <Minor>00</Minor>
+    </Version>
+  </METADATA>
+
+  <PRESENTATION ID="Guidance">
+    <STYLELIST>
+      <!-- STYLE field="MAP_BEACH_CLR"><COLOR><PRIMARY day="#F7F0D5" night="#4C3B26"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_BUILDING_CLR"><COLOR><PRIMARY day="#D2D9DB" night="#1E1E1E"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_EXTRD_AREA_CLR"><COLOR><PRIMARY day="#D2D9DB" night="#1E1E1E"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_LAND_CLR"><COLOR><PRIMARY day="#D8D8D6" night="#0C0C0D"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_MISC_AREA_CLR"><COLOR><PRIMARY day="#C3CCD1" night="#191919"/></COLOR></STYLE -->
+      <STYLE field="MAP_MISC_WATER_AREA_CLR"><COLOR><PRIMARY day="#AAD3DF" night="#162e3f"/></COLOR></STYLE>
+      <!-- STYLE field="MAP_PARK_CLR"><COLOR><PRIMARY day="#B9D8AF" night="#0D1A0D"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_RWY_HSRFC_CLR"><COLOR><PRIMARY day="#B0B7C1" night="#333638"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_URBAN_LAND_CLR"><COLOR><PRIMARY day="#E2E5E8" night="#111112"/></COLOR></STYLE -->
+      <STYLE field="MAP_WATER_CLR"><COLOR><PRIMARY day="#AAD3DF" night="#162e3f"/></COLOR></STYLE>
+      <!-- STYLE field="MAP_WETLAND_CLR"><COLOR><PRIMARY day="#95dbbf" night="#0C1E1A"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_WOODS_CLR"><COLOR><PRIMARY day="#B0D3A3" night="#0B170B"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_TRANSPORTATION_LINE_CLR" scale=".10"><COLOR><PRIMARY day="#B4BBC4" night="#39393D"/><SECONDARY day="#898F95" night="#39393D"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_MISC_WATER_LINE_CLR" scale=".60" border="1.00"><COLOR><PRIMARY day="#4b84a0" night="#335d7c"/><SECONDARY day="#346478" night="#335d7c"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_PLTCL_INTL_CLR" scale=".50"><COLOR><PRIMARY day="#000000" night="#FFFFFF"/><SECONDARY day="#000000" night="#FFFFFF"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_PLTCL_MJR_CLR" scale=".20"><COLOR><PRIMARY day="#000000" night="#FFFFFF"/><SECONDARY day="#000000" night="#FFFFFF"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_PLTCL_MNR_CLR" scale=".10"><COLOR><PRIMARY day="#000000" night="#FFFFFF"/><SECONDARY day="#000000" night="#FFFFFF"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_ROAD_ALLY_CLR" scale=".20"><COLOR><PRIMARY day="#9FA7AD" night="#555960"/><SECONDARY day="#9FA7AD" night="#555960"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_ROAD_ARTERIAL_CLR" scale=".60"><COLOR><PRIMARY day="#198C75" night="#22756B"/><SECONDARY day="#265A57" night="#18524B"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_ROAD_COLLECTOR_CLR" scale=".70"><COLOR><PRIMARY day="#198C75" night="#22756B"/><SECONDARY day="#265A57" night="#18524B"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_ROAD_INTERSTATE_CLR" scale="1.10"><COLOR><PRIMARY day="#FF9800" night="#D1721C"/><SECONDARY day="#644C25" night="#593706"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_ROAD_SS_INTERSTATE_CLR" scale=".70"><COLOR><PRIMARY day="#FF9800" night="#D1721C"/><SECONDARY day="#644C25" night="#593706"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_ROAD_HWY_MJR_CLR" scale="1.05"><COLOR><PRIMARY day="#EAA62F" night="#A85714"/><SECONDARY day="#5F4521" night="#472F13"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_ROAD_HWY_MNR_CLR" scale=".90"><COLOR><PRIMARY day="#EAA62F" night="#A85714"/><SECONDARY day="#5F4521" night="#472F13"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_ROAD_RAILRD_CLR"><COLOR><PRIMARY day="#B5C1C6" night="#252A30"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_ROAD_RAMP_CLR" scale=".80"><COLOR><PRIMARY day="#DC8A24" night="#7C390D"/><SECONDARY day="#5C4722" night="#472F13"/></COLOR></STYLE -->
+
+      <!-- motomap - testing, color residential roads blue -->
+      <!-- STYLE field="MAP_ROAD_RESIDENTIAL_CLR" scale=".30"><COLOR><PRIMARY day="#0000FF" night="#555960"/><SECONDARY day="#0000FF" night="#555960"/></COLOR></STYLE -->
+      <!-- motomap - purple unpaved trails that are publicly accessible -->
+      <!-- STYLE field="MAP_ROAD_TRAIL_CLR" scale="6.0"><COLOR><PRIMARY day="#00FF00" night="#6E401B"/><SECONDARY day="#00FF00" night="#6E401B"/></COLOR></STYLE -->
+      <!-- motomap - red unpaved roads that are publicly accessible -->
+      <!-- STYLE field="MAP_ROAD_UNPAVED_CLR" scale="1.50"><COLOR><PRIMARY day="#FF0000" night="#3841fc"/><SECONDARY day="#FF0000" night="#3841fc"/></COLOR></STYLE -->
+
+      <!-- STYLE field="MAP_RTE_ACTV_LEG_CLR" scale="1.15"><COLOR><PRIMARY day="#FC00FC" night="#F046F0"/><SECONDARY day="#A232A7" night="#D400E5"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_RTE_ARRW_CLR" scale="1.00"><COLOR><PRIMARY day="#FFFFFF" night="#E6E6E6"/><SECONDARY day="#000000" night="#000000"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_TRK_CLR" scale="1.00"><COLOR><PRIMARY day="#06EEEE" night="#06EEEE"/><SECONDARY day="#06EEEE" night="#06EEEE"/></COLOR></STYLE -->
+    </STYLELIST>
+  </PRESENTATION>
+
+</GARMIN_MAP_THEME>
