@@ -583,17 +583,17 @@ Xpm="0 0 1 0"
 ;"1 c #AAD3DF"
 ;[end]
 
-;[_polygon]
-;type=0x3c
+[_polygon]
+type=0x3c
 ;GRMN_TYPE: Water Areas/LAKE_100MI/Lake less than 250 sq mi but greater or equal to 100 sq mi in area/Non NT
-;String=Lake
-;ExtendedLabels=N
-;FontStyle=SmallFont
-;CustomColor=Day
+String=Lake
+ExtendedLabels=Y
+FontStyle=NoLabel (invisible)
+CustomColor=No
 ;DaycustomColor:#4D80B3
-;Xpm="0 0 1 0"
-;"1 c #AAD3DF"
-;[end]
+Xpm="0 0 1 0"
+"1 c #AAD3DF"
+[end]
 
 [_polygon]
 type=0x3d
@@ -651,17 +651,17 @@ Xpm="32 32 2 1"
 ;"1 c #AAD3DF"
 ;[end]
 
-;[_polygon]
-;type=0x41
+[_polygon]
+type=0x41
 ;GRMN_TYPE: Water Areas/LAKE_LT_1MI, SMALL_LAKE/Small lake, typically less than 5 sq mi in area/Non NT
-;String=Small Lake
-;ExtendedLabels=N
-;FontStyle=SmallFont
-;CustomColor=Day
-;DaycustomColor:#4D80B3
-;Xpm="0 0 1 0"
-;"1 c #AAD3DF"
-;[end]
+String=Small Lake
+ExtendedLabels=Y
+FontStyle=NoLabel (invisible)
+CustomColor=No
+;DaycustomColor:#FF0000
+Xpm="0 0 1 0"
+"1 c #AAD3DF"
+[end]
 
 ;[_polygon]
 ;type=0x46
@@ -794,7 +794,7 @@ Xpm="32 32 2 1"
 type=0x50
 ;GRMN_TYPE: Surface Cover Areas/WOODS/Wooded or forested area/Non NT
 String=Woods
-ExtendedLabels=Y
+ExtendedLabels=N
 FontStyle=NoLabel (invisible)
 CustomColor=No
 Xpm="0 0 1 0"
@@ -4610,8 +4610,8 @@ subtype=0x05
 String=Canal / Lock
 ExtendedLabels=Y
 FontStyle=SmallFont
-CustomColor=Day
-DaycustomColor:#5E5E5D
+CustomColor=No
+;DaycustomColor:#5E5E5D
 DayXpm="9 9 2 1"   Colormode=16
 "!	c #A4A4A4"
 "  	c none"
@@ -4634,8 +4634,8 @@ subtype=0x08
 String=Waterfall
 ExtendedLabels=Y
 FontStyle=SmallFont
-CustomColor=Day
-DaycustomColor:#4863A0
+CustomColor=No
+;DaycustomColor:#4863A0
 DayXpm="15 14 2 1"   Colormode=16
 "!	c #4D80B3"
 "  	c none"
@@ -4694,8 +4694,8 @@ subtype=0x0f
 String=Reservoir
 ExtendedLabels=Y
 FontStyle=SmallFont
-CustomColor=Day
-DaycustomColor:#4D80B3
+CustomColor=No
+;DaycustomColor:#4D80B3
 DayXpm="1 1 2 1"   Colormode=16
 "!	c #009500"
 "  	c none"
@@ -4710,8 +4710,8 @@ subtype=0x11
 String=Spring
 ExtendedLabels=Y
 FontStyle=SmallFont
-CustomColor=Day
-DaycustomColor:#4D80B3
+CustomColor=No
+;DaycustomColor:#4D80B3
 DayXpm="9 9 2 1"   Colormode=16
 "!	c #7BBCEC"
 "  	c none"
@@ -4734,8 +4734,8 @@ subtype=0x12
 String=Stream
 ExtendedLabels=Y
 FontStyle=SmallFont
-CustomColor=Day
-DaycustomColor:#4D80B3
+CustomColor=No
+;DaycustomColor:#4D80B3
 DayXpm="1 1 2 1"   Colormode=16
 "!	c #009500"
 "  	c none"
@@ -4750,8 +4750,8 @@ subtype=0x13
 String=Swamp
 ExtendedLabels=Y
 FontStyle=SmallFont
-CustomColor=Day
-DaycustomColor:#4D80B3
+CustomColor=No
+;DaycustomColor:#4D80B3
 DayXpm="1 1 2 1"   Colormode=16
 "!	c #009500"
 "  	c none"
@@ -4786,8 +4786,8 @@ subtype=0x03
 String=Basin
 ExtendedLabels=Y
 FontStyle=SmallFont
-CustomColor=Day
-DaycustomColor:#4D80B3
+CustomColor=N
+;DaycustomColor:#4D80B3
 DayXpm="1 1 2 1"   Colormode=16
 "!	c #009500"
 "  	c none"
@@ -4905,8 +4905,8 @@ subtype=0x18
 String=Woods
 ExtendedLabels=Y
 FontStyle=SmallFont
-CustomColor=Day
-DaycustomColor:#527247
+CustomColor=No
+;DaycustomColor:#527247
 DayXpm="1 1 2 1"   Colormode=16
 "!	c #009500"
 "  	c none"

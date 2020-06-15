@@ -16,7 +16,7 @@
       <!-- STYLE field="MAP_BEACH_CLR"><COLOR><PRIMARY day="#F7F0D5" night="#4C3B26"/></COLOR></STYLE -->
       <!-- STYLE field="MAP_BUILDING_CLR"><COLOR><PRIMARY day="#D2D9DB" night="#1E1E1E"/></COLOR></STYLE -->
       <!-- STYLE field="MAP_EXTRD_AREA_CLR"><COLOR><PRIMARY day="#D2D9DB" night="#1E1E1E"/></COLOR></STYLE -->
-      <!-- STYLE field="MAP_LAND_CLR"><COLOR><PRIMARY day="#D8D8D6" night="#0C0C0D"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_LAND_CLR"><COLOR><PRIMARY day="#f2ece5" night="#0C0C0D"/></COLOR></STYLE -->
       <!-- STYLE field="MAP_MISC_AREA_CLR"><COLOR><PRIMARY day="#C3CCD1" night="#191919"/></COLOR></STYLE -->
       <STYLE field="MAP_MISC_WATER_AREA_CLR"><COLOR><PRIMARY day="#AAD3DF" night="#162e3f"/></COLOR></STYLE>
       <!-- STYLE field="MAP_PARK_CLR"><COLOR><PRIMARY day="#B9D8AF" night="#0D1A0D"/></COLOR></STYLE -->
@@ -26,7 +26,7 @@
       <!-- STYLE field="MAP_WETLAND_CLR"><COLOR><PRIMARY day="#95dbbf" night="#0C1E1A"/></COLOR></STYLE -->
       <!-- STYLE field="MAP_WOODS_CLR"><COLOR><PRIMARY day="#B0D3A3" night="#0B170B"/></COLOR></STYLE -->
       <!-- STYLE field="MAP_TRANSPORTATION_LINE_CLR" scale=".10"><COLOR><PRIMARY day="#B4BBC4" night="#39393D"/><SECONDARY day="#898F95" night="#39393D"/></COLOR></STYLE -->
-      <!-- STYLE field="MAP_MISC_WATER_LINE_CLR" scale=".60" border="1.00"><COLOR><PRIMARY day="#4b84a0" night="#335d7c"/><SECONDARY day="#346478" night="#335d7c"/></COLOR></STYLE -->
+      <!-- STYLE field="MAP_MISC_WATER_LINE_CLR" scale=".60" border="1.00"><COLOR><PRIMARY day="#ff0000" night="#335d7c"/><SECONDARY day="#ff0000" night="#335d7c"/></COLOR></STYLE -->
       <!-- STYLE field="MAP_PLTCL_INTL_CLR" scale=".50"><COLOR><PRIMARY day="#000000" night="#FFFFFF"/><SECONDARY day="#000000" night="#FFFFFF"/></COLOR></STYLE -->
       <!-- STYLE field="MAP_PLTCL_MJR_CLR" scale=".20"><COLOR><PRIMARY day="#000000" night="#FFFFFF"/><SECONDARY day="#000000" night="#FFFFFF"/></COLOR></STYLE -->
       <!-- STYLE field="MAP_PLTCL_MNR_CLR" scale=".10"><COLOR><PRIMARY day="#000000" night="#FFFFFF"/><SECONDARY day="#000000" night="#FFFFFF"/></COLOR></STYLE -->

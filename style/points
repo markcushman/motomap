@@ -358,7 +358,7 @@ barrier=bollard | barrier=bus_trap | barrier=gate | barrier=block | barrier=cycl
     barrier=stile | barrier=kissing_gate | barrier=lift_gate | barrier=swing_gate
     {add name='${barrier|subst:"_=> "}'} [0x3200 resolution 24]
 
-landuse=basin | landuse=reservoir [0x650f resolution 24]
+landuse=basin | landuse=reservoir {delete name} [0x650f resolution 24]
 
 natural=beach [0x6604 resolution 24]
 natural=glacier [0x650a resolution 24]
