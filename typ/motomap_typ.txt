@@ -974,7 +974,7 @@ LineWidth=8
 BorderWidth=1
 Xpm="0 0 2 0"
 "1 c #FFFFFF"
-"2 c #888888"
+"2 c #666666"
 String=Tertiary Road
 ExtendedLabels=Y
 FontStyle=SmallFont
@@ -989,7 +989,7 @@ LineWidth=5
 BorderWidth=1
 Xpm="0 0 2 0"
 "1 c #FFFFFF"
-"2 c #888888"
+"2 c #666666"
 String=Residential/Minor/Unclassified
 ExtendedLabels=Y
 FontStyle=SmallFont
@@ -1005,7 +1005,7 @@ LineWidth=2
 BorderWidth=0
 Xpm="0 0 2 0"
 "1 c #AAAAAA"
-"2 c #888888"
+"2 c #666666"
 String=Residential/Minor/Unclassified Zoom
 ExtendedLabels=Y
 FontStyle=SmallFont
@@ -1024,8 +1024,7 @@ Xpm="0 0 2 0"
 String=Alley
 ExtendedLabels=Y
 FontStyle=SmallFont
-CustomColor=Day
-DaycustomColor:#626262
+CustomColor=No
 [end]
 
 [_line]
@@ -1074,6 +1073,22 @@ FontStyle=SmallFont
 CustomColor=No
 [end]
 
+;motomap added this line style for zoomed out unpaved roads
+[_line]
+type=0x010e01
+;GRMN_TYPE: Roads/RESIDENTIAL/Residential street, these are typically the most numerous roads in a detailed city map and do not show up until the user is zoomed in quite far/Non NT, NT
+UseOrientation=N
+LineWidth=2
+BorderWidth=0
+Xpm="0 0 2 0"
+"1 c #0000FF"
+"2 c #0000FF"
+String=Motomap Unpaved Road Zoom
+ExtendedLabels=Y
+FontStyle=SmallFont
+CustomColor=No
+[end]
+
 [_line]
 type=0x0b
 ;GRMN_TYPE: Roads/MAJOR_CONNECTOR/Major highway connector/Non NT, NT
@@ -1104,7 +1119,7 @@ FontStyle=SmallFont
 CustomColor=No
 [end]
 
-;motomap - trails show up in red
+;motomap - trails/tracks show up in red
 [_line]
 type=0x10
 ;GRMN_TYPE: Custom routable road 1 (Unpaved Track-thin)
@@ -1116,6 +1131,21 @@ Xpm="0 0 2 0"
 "2 c #FF0000"
 String=Motomap Trail
 ExtendedLabels=N
+FontStyle=SmallFont
+CustomColor=No
+[end]
+
+;motomap added this line style for zoomed out unpaved trails/tracks
+[_line]
+type=0x010e02
+UseOrientation=N
+LineWidth=2
+BorderWidth=0
+Xpm="0 0 2 0"
+"1 c #FF0000"
+"2 c #FF0000"
+String=Motomap Unpaved Track Zoom
+ExtendedLabels=Y
 FontStyle=SmallFont
 CustomColor=No
 [end]

@@ -152,13 +152,6 @@ highway=secondary [0x04 road_class=2 road_speed=3 resolution 20]
 highway=secondary_link & mkgmap:fast_road=yes [0x08 road_class=3 road_speed=1 resolution 22]
 highway=secondary_link [0x08 road_class=2 road_speed=1 resolution 22]
 
-highway=tertiary [0x05 road_class=1 road_speed=3 resolution 20]
-
-
-highway=tertiary_link [0x08 road_class=1 road_speed=1 resolution 22]
-
-highway=yes {set highway=footway}  # fix common bad tagging - little bits of path to join other routable ways
-
 # motomap - delete pedestrian, bridleways and byways (wtf is a byway?)
 # highway=pedestrian {set tmp:stopMopUp=yes} [0x16 road_class=0 road_speed=0 resolution 22 continue with_actions]
 # highway=bridleway [0x07 road_class=0 road_speed=0 resolution 23]
@@ -187,21 +180,30 @@ highway=service & (service=driveway) {delete highway; delete junction}
 # motomap - flag unpaved roads that are more than 100m
 # way[highway][highway!~"service|footway|path|cycleway"][access!~"private|no"][motor_vehicle!~"no"]
 # [surface~"unpaved|gravel|dirt|unsurfaced|earth|compacted|fine_gravel|mud|sand|ground"];
-
 (highway!=track & highway!=service) &
-    (access!=private & access!=no) &
-    (motor_vehicle!=no) &
+    (access!=private & access!=no) & (motor_vehicle!=no) &
     (surface=gravel | surface=dirt | surface=unpaved | surface=unsurfaced | surface=ground | surface=earth | surface=compacted | surface=fine_gravel) &
     length()>100
-    {set mkgmap:unpaved=1} [0x0a resolution 22]
+    {set mkgmap:unpaved=1} [0x0a resolution 23 continue]
+(highway!=track & highway!=service) &
+    (access!=private & access!=no) & (motor_vehicle!=no) &
+    (surface=gravel | surface=dirt | surface=unpaved | surface=unsurfaced | surface=ground | surface=earth | surface=compacted | surface=fine_gravel) &
+    length()>100 [0x010e01 resolution 22-21]
 
 # motomap - flag tracks that are more than 100m
 (highway=track | highway=service) &
-    (access!=private & access!=no) &
-    (motor_vehicle!=no) &
+    (access!=private & access!=no) & (motor_vehicle!=no) &
     (surface=gravel | surface=dirt | surface=unpaved | surface=unsurfaced | surface=ground | surface=earth | surface=compacted | surface=fine_gravel) &
     length()>100
-    {set mkgmap:unpaved=1} [0x10 resolution 22]
+    {set mkgmap:unpaved=1} [0x10 resolution 23 continue]
+(highway=track | highway=service) &
+    (access!=private & access!=no) & (motor_vehicle!=no) &
+    (surface=gravel | surface=dirt | surface=unpaved | surface=unsurfaced | surface=ground | surface=earth | surface=compacted | surface=fine_gravel) &
+    length()>100 [0x010e02 resolution 22-21]
+
+highway=tertiary [0x05 road_class=1 road_speed=3 resolution 20]
+highway=tertiary_link [0x08 road_class=1 road_speed=1 resolution 22]
+highway=yes {set highway=footway}  # fix common bad tagging - little bits of path to join other routable ways
 
 highway=minor [0x06     road_class=1 road_speed=3 resolution 23 continue]
 highway=minor [0x010e00 road_class=1 road_speed=3 resolution 22-21]
