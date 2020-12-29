@@ -7,7 +7,8 @@ A set of mkgmap configuration files and shell scripts to create adventure motorc
 * download desired map data (\*.osm.pbf) from https://download.geofabrik.de/
 * place map data files (\*.osm.pbf) in **motomap_work/**
 * edit **motomap.sh** to include paths to the map data files
-* download mkgmap http://www.mkgmap.org.uk/ and place in a **mkgmap** directory alongside **motomap**
+* download **mkgmap** http://www.mkgmap.org.uk/ and place in a **mkgmap** directory alongside **motomap**
+* download **splitter** http://www.mkgmap.org.uk/ and place in a **splitter** directory alongside **motomap**
 * run **motomap/motomap.sh**
 * copy the image files from **motomap_work/\*.img** to your Garmin device in the **/Map** directory
 * copy **motomap.kmtf** to your Garmin device in the **/Themes/Map** directory
