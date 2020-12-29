@@ -11,6 +11,13 @@ To utilize this style:
 * copy the image files from **motomap_work/\*.img** to your Garmin device in the **/Map** directory
 * copy **motomap.kmtf** to your Garmin device in the **/Themes/Map** directory
 
-Generates a map that looks like this (Garmin Zumo XT):
+Right now support only for Latin characters.
+Generates maps that looks like these (Garmin Zumo XT):
 
-![Image](https://github.com/markcushman/motomap/blob/master/screenshots/chattahoochee%20national%20forest.png?raw=true)
+![Image](https://github.com/markcushman/motomap/blob/master/screenshots/chattahoochee%20nf.png?raw=true)
+
+![Image](https://github.com/markcushman/motomap/blob/master/screenshots/old%20dial%20road.png?raw=true)
+
+![Image](https://github.com/markcushman/motomap/blob/master/screenshots/old%20dial%20road%20zoomed.png?raw=true)
+
+![Image](https://github.com/markcushman/motomap/blob/master/screenshots/85%20and%20400.png?raw=true)
