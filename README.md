@@ -2,7 +2,7 @@
 A set of mkgmap configuration files and shell scripts to create adventure motorcycle maps for Garmin devices. The style uses OpenStreetMap data to highlight roads that have been marked as unpaved in blue and smaller roads (called tracks) that are marked as unpaved in red. This configuration works well on a Garmin Zumo XT, untested on any other device. Generages multiple map files (in Garmin **\*.img** format) and a style **motomap.kmtf** file that can be dropped into the filesystem of a Garmin device.
 
 ## Pre-Built Maps
-If you don't want to go through all this trouble and are simply looking for pre-built maps, you can find US/Canada maps at http://motomap.org/
+If you are looking for pre-built maps to download, you can find US/Canada maps at http://motomap.org/
 
 ## Usage
 * make sure you have a working java installation
