@@ -65,6 +65,7 @@ Did you find a dirt road that isn't shown in blue/red on the map?  This can be f
 * Upload your changes to OpenStreetMap
 * Wait approximately 2 hours for the maps to update on the GeoFabrik download server
 * Re-download the maps and re-generate the Garmin **\*.img** files
+
 I made a YouTube video that explains this process in detail: https://www.youtube.com/watch?v=L6S9UUMdVdg
 
 ## Searching for dirt roads/tracks
