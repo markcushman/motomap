@@ -65,6 +65,7 @@ Did you find a dirt road that isn't shown in blue/red on the map?  This can be f
 * Upload your changes to OpenStreetMap
 * Wait approximately 2 hours for the maps to update on the GeoFabrik download server
 * Re-download the maps and re-generate the Garmin **\*.img** files
+I made a YouTube video that explains this process in detail: https://www.youtube.com/watch?v=L6S9UUMdVdg
 
 ## Searching for dirt roads/tracks
 A great resource to query OpenStreetMap data for certain features is https://overpass-turbo.eu/.  This website allows you to query for features on the map that have certain attributes.  The query I have been using to find dirt roads while developing the Motomap style is:
