@@ -49,13 +49,13 @@ Connect your Garmin device and copy the **\*.img** files above into **/Map**, re
 ## Screenshots
 Generated from a Garmin Zumo XT
 
-![Image](https://github.com/markcushman/motomap/blob/master/screenshots/chattahoochee%20nf.png?raw=true)
+![Image](https://github.com/markcushman/motomap/blob/main/screenshots/chattahoochee%20nf.png?raw=true)
 
-![Image](https://github.com/markcushman/motomap/blob/master/screenshots/old%20dial%20road.png?raw=true)
+![Image](https://github.com/markcushman/motomap/blob/main/screenshots/old%20dial%20road.png?raw=true)
 
-![Image](https://github.com/markcushman/motomap/blob/master/screenshots/old%20dial%20road%20zoomed.png?raw=true)
+![Image](https://github.com/markcushman/motomap/blob/main/screenshots/old%20dial%20road%20zoomed.png?raw=true)
 
-![Image](https://github.com/markcushman/motomap/blob/master/screenshots/85%20and%20400.png?raw=true)
+![Image](https://github.com/markcushman/motomap/blob/main/screenshots/85%20and%20400.png?raw=true)
 
 ## Updating maps
 Did you find a dirt road that isn't shown in blue/red on the map?  This can be fixed by editing OpenStreetMap at http://openstreetmap.org/ which is the ultimate source for the map data.  You will have to become a contributor (sign up for a login), then:
