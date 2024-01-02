@@ -1,0 +1,37 @@
+on: workflow_dispatch
+name: Deploy_ACI
+
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+        # checkout our repo
+        - name: 'Checkout GitHub Action'
+          uses: actions/checkout@master
+          
+        - name: 'Login via Azure CLI'
+          uses: azure/login@v1.5.1
+          with:
+            creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
+        - uses: azure/docker-login@v1.0.1
+          with:
+            login-server: ${{ secrets.REGISTRY_SERVER }}
+            username: ${{ secrets.REGISTRY_USERNAME }}
+            password: ${{ secrets.REGISTRY_PASSWORD }}
+        - run: |
+            docker build . -t ${{ secrets.REGISTRY_SERVER }}/motomap:${{ github.sha }}
+            docker push ${{ secrets.REGISTRY_SERVER }}/motomap:${{ github.sha }}
+
+        - name: 'Deploy to Azure Container Instances'
+          uses: 'azure/aci-deploy@v1.1.3'
+          with:
+            resource-group: ${{ secrets.RESOURCE_GROUP }}
+            dns-name-label: url-for-container
+            image: ${{ secrets.REGISTRY_SERVER }}/motomap:${{ github.sha }}
+            cpu: 1   #Optional
+            memory: 1   #Optional
+            registry-username: ${{ secrets.REGISTRY_USERNAME }}
+            registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+            name: motomap-app-container
+            location: 'Central US'
