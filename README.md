@@ -1,5 +1,5 @@
-[!WARNING]  
-Motomap is currently in the process of being containerized, you may have to pull an older motomap.sh file for these instructions to work properly
+> [!WARNING]  
+> Motomap is currently in the process of being containerized, you may have to pull an older motomap.sh file for these instructions to work properly
 
 # Motomap
 A set of mkgmap configuration files and shell scripts to create adventure motorcycle maps for Garmin devices. The style uses OpenStreetMap data to highlight roads that have been marked as unpaved in blue and smaller roads (called tracks) that are marked as unpaved in red. This configuration works well on a Garmin Zumo XT, untested on any other device. Generages multiple map files (in Garmin **\*.img** format) and a style **motomap.kmtf** file that can be dropped into the filesystem of a Garmin device.
