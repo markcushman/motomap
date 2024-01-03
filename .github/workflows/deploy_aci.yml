@@ -4,6 +4,7 @@ name: Deploy_ACI
 jobs:
     build-and-deploy:
         runs-on: ubuntu-latest
+        environment: prod_azure_motomap
         steps:
         # checkout our repo
         - name: 'Checkout GitHub Action'
