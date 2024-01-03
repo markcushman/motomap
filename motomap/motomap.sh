@@ -4,17 +4,23 @@
 # get variables if they are passed on the command line
 # otherwise get the environment variables
 
+export MOTOMAP_INPUT_FILE=/motomap/map001.osm
+export MOTOMAP_OUTPUT_FILE=/motomap/map001.img
+export MOTOMAP_MAPID=0001
+export MOTOMAP_MAPDESC="Small Home"
+
 if [ $# -eq 0 ]
   then
     input_file=$MOTOMAP_INPUT_FILE
     output_file=$MOTOMAP_OUTPUT_FILE
     mapid=$MOTOMAP_MAPID
+    mapdesc=$MOTOMAP_MAPDESC
   else
     input_file=$1
     output_file=$2
     mapid=$3
+    mapdesc=$4
 fi
-
 
 # fileext=$(date +'%Y-%m-%d_%H-%M-%S')
 
@@ -38,25 +44,30 @@ echo "input_file = $input_file"
 echo "output_file = $output_file"
 echo "mapid = $mapid"
 echo "mapname = $mapname"
+echo "mapdesc = $mapdesc"
 
-mv $input_file "moved$input_file"
-touch $output_file
+#jump into the motomap base dir
+cd /motomap/
+mkdir -p /motomap/working
 
+echo "INFO: Motomap Processing - Splitting Map"
 # split each pbf file into segments so we don't run out of memory
-#java -jar splitter/splitter.jar --output-dir="motomap_work/" "motomap_work/${map[$i]}-latest.osm.pbf"
+java -Xmx1024m -jar splitter/splitter.jar --output-dir="working/" $input_file
 
+echo "INFO: Motomap Processing - Generating Map"
 # gen the .img file from the split files
-#java -Xmx4096m -jar mkgmap/mkgmap.jar --mapname="$mapname" --family-id="${mapid[$i]}" --family-name="Motomap ${path[1]}" --description="Motomap ${path[1]}" --output-dir=motomap_work/ -c motomap/motomap.cfg motomap_work/6324*.osm.pbf motomap/typ/motomap_typ.txt
+java -Xmx1024m -jar mkgmap/mkgmap.jar --mapname="$mapname" --family-id="$mapid" --family-name="Motomap - $mapdesc" --description="Motomap - $mapdesc" --output-dir=working/ -c motomap/motomap.cfg working/6324*.osm.pbf motomap/typ/motomap_typ.txt
 
 # rename the output file
-#mv motomap_work/gmapsupp.img "motomap_work/${path[0]}/motomap-${path[1]}.img"
+mv working/gmapsupp.img $output_file
 
 #clean up
-#rm -f motomap_work/ovm_6324*.img motomap_work/6324*.img
-#rm -f motomap_work/6324*.pbf
-#rm -f motomap_work/motomap_typ.typ motomap_work/osmmap.img motomap_work/osmmap.tdb
-#rm -f motomap_work/template.args motomap_work/areas.poly motomap_work/areas.list motomap_work/densities-out.txt
+#rm -f working/ovm_6324*.img working/6324*.img
+#rm -f working/6324*.pbf
+#rm -f working/motomap_typ.typ working/osmmap.img working/osmmap.tdb
+#rm -f working/template.args working/areas.poly working/areas.list working/densities-out.txt
 
-#cp motomap/themes/motomap.kmtf motomap_work/
+#cp motomap/themes/motomap.kmtf working/
 echo "INFO: Motomap Processing Finished"
-
+echo "INFO: Listing Directory Contents"
+ls -al /motomap/
