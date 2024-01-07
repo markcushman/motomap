@@ -28,7 +28,7 @@ jobs:
             mv splitter-r653 splitter
             mv mkgmap-r4916 mkgmap
             docker build . -t ${{ secrets.REGISTRY_SERVER }}/motomap:${{ github.sha }} -t ${{ secrets.REGISTRY_SERVER }}/motomap:latest
-            docker rmi ${{ secrets.REGISTRY_SERVER }}/motomap:latest
+            az acr repository untag --name ${{ secrets.REGISTRY_SERVER }} --image motomap:latest
             docker push --all-tags ${{ secrets.REGISTRY_SERVER }}/motomap
 
 #        - name: 'Deploy to Azure Container Instances'
