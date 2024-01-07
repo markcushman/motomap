@@ -5,7 +5,6 @@ FROM ibmjava:sfj
 COPY mkgmap /motomap/mkgmap
 COPY splitter /motomap/splitter
 COPY motomap /motomap/motomap
-COPY testmap/map001.osm /motomap/map001.osm
 
 # run motomap
 CMD ["/bin/bash", "/motomap/motomap/motomap.sh"]
