@@ -1,13 +1,13 @@
 #!/bin/bash
 # motomap builder script
 
+#export MOTOMAP_INPUT_FILE=/motomap/map001.osm
+#export MOTOMAP_OUTPUT_FILE=/motomap/map001.img
+#export MOTOMAP_MAPID=0001
+#export MOTOMAP_MAPDESC="Small Home"
+
 # get variables if they are passed on the command line
 # otherwise get the environment variables
-
-export MOTOMAP_INPUT_FILE=/motomap/map001.osm
-export MOTOMAP_OUTPUT_FILE=/motomap/map001.img
-export MOTOMAP_MAPID=0001
-export MOTOMAP_MAPDESC="Small Home"
 
 if [ $# -eq 0 ]
   then
@@ -40,11 +40,11 @@ mapname=$((6324$mapid))
 
 echo "INFO: Motomap Processing Started"
 
-echo "input_file = $input_file"
-echo "output_file = $output_file"
-echo "mapid = $mapid"
-echo "mapname = $mapname"
-echo "mapdesc = $mapdesc"
+echo "INFO: input_file = $input_file"
+echo "INFO: output_file = $output_file"
+echo "INFO: mapid = $mapid"
+echo "INFO: mapname = $mapname"
+echo "INFO: mapdesc = $mapdesc"
 
 #jump into the motomap base dir
 cd /motomap/
