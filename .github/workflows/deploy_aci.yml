@@ -27,7 +27,7 @@ jobs:
             unzip mkgmap.zip
             mv splitter-r653 splitter
             mv mkgmap-r4916 mkgmap
-            docker build . -t ${{ secrets.REGISTRY_SERVER }}/motomap:${{ github.sha }}
+            docker build . -t ${{ secrets.REGISTRY_SERVER }}/motomap:${{ github.sha }} -t ${{ secrets.REGISTRY_SERVER }}/motomap:latest
             docker push ${{ secrets.REGISTRY_SERVER }}/motomap:${{ github.sha }}
 
 #        - name: 'Deploy to Azure Container Instances'
