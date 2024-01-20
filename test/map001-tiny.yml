@@ -1,0 +1,16 @@
+# motomap configuration file
+
+# directory and file locations
+# if running in a Docker file, set the base_dir to /motomap/
+inputfile: test/map001-tiny.osm
+outputfile: test/map001-tiny.img
+
+# java settings for memory
+memmin: 4G
+memmax: 4G
+
+# map specific variables for mkgmap
+# mapname should be a unique 8 character value
+mapname: 63241601
+familyid: 16001
+mapdesc: Tiny Testmap
