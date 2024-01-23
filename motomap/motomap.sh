@@ -8,7 +8,7 @@ exec 2>&1
 # if we are on MacOS then alias the date command to gdate
 # install the coreutils package to get this: brew install coreutils
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ "$(uname)" == "Darwin"* ]]; then
    date() { gdate "$@"; }
 fi
 
