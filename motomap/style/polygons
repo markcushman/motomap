@@ -25,7 +25,8 @@ aeroway=helipad [0x0e resolution 22]
 # amenity=food_court [0x08 resolution 22]
 # amenity=college [0x0a resolution 22]
 parking=underground | parking=multi-storey [0x06 resolution 22]
-amenity=parking | parking=surface [0x05 resolution 22]
+amenity=parking {deletealltags}
+# amenity=parking | parking=surface [0x05 resolution 22]
 # amenity=prison [0x04 resolution 22]
 # amenity=school [0x0a resolution 22]
 # amenity=supermarket is superceded by shop=supermarket or landuse=retail
@@ -115,7 +116,7 @@ landuse=vineyard [0x4e resolution 20]
 landuse=orchard [0x4e resolution 20]
 
 military=airfield [0x04 resolution 20]
-military=barracks [0x04 resolution 23]
+# military=barracks [0x04 resolution 23]
 military=danger_area [0x11 resolution 20]
 military=range [0x04 resolution 20]
 
@@ -125,12 +126,16 @@ military=range [0x04 resolution 20]
 natural=wood {delete name} [0x50 resolution 20]
 
 # building tag should be last
-amenity=* & area!=no & amenity!=grave_yard {add name='${amenity|subst:"_=> "}'} [0x23 resolution 24]
-building=* & building!=no [0x13 resolution 24]
-tourism=* & area!=no & waterway!=* {add name='${tourism|subst:"_=> "}'} [0x21 resolution 24]
+
+# motomap - remove amenities and buildings
+
+#amenity=* & area!=no & amenity!=grave_yard {add name='${amenity|subst:"_=> "}'} [0x23 resolution 24]
+building=* & building!=no {deletealltags}
+tourism=* & area!=no & waterway!=* {deletealltags}
 
 # man_made can be used on areas or lines
-man_made=* & area!=no {add name='${man_made|subst:"_=> "}'} [0x24 resolution 24]
+# man_made=* & area!=no {add name='${man_made|subst:"_=> "}'} [0x24 resolution 24]
+man_made=* {deletealltags}
 
 # render small named islands
 place=island & name=* & area_size() < 1000000 [0x53 resolution 19]

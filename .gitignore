@@ -3,6 +3,8 @@ splitter/
 mkgmap/
 azure/
 test/*.img
+test/georgia*
+precomp-sea/
 
 # Azurite artifacts
 __blobstorage__

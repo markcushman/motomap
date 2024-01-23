@@ -21,12 +21,15 @@ jobs:
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
-            curl --output splitter.zip https://motomap.azureedge.net/lib/splitter-r653.zip
-            curl --output mkgmap.zip https://motomap.azureedge.net/lib/mkgmap-r4916.zip
+            curl --output splitter.zip https://motomap.azureedge.net/lib/splitter-latest.zip
+            curl --output mkgmap.zip https://motomap.azureedge.net/lib/mkgmap-latest.zip
+            curl --output mkgmap.zip https://motomap.azureedge.net/lib/sea-latest.zip
             unzip splitter.zip
             unzip mkgmap.zip
             mv splitter-r653 splitter
             mv mkgmap-r4916 mkgmap
+            mkdir precomp-sea
+            mv sea-latest.zip precomp-sea
             docker build . -t ${{ secrets.REGISTRY_SERVER }}/motomap:${{ github.sha }} -t ${{ secrets.REGISTRY_SERVER }}/motomap:latest
             az acr repository untag --name ${{ secrets.REGISTRY_SERVER }} --image motomap:latest
             docker push --all-tags ${{ secrets.REGISTRY_SERVER }}/motomap

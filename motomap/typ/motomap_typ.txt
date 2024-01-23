@@ -1057,16 +1057,26 @@ FontStyle=NoLabel (invisible)
 CustomColor=No
 [end]
 
-;motomap - unpaved roads show up in blue
+;motomap - unpaved roads show up in green checkered pattern
 [_line]
 type=0x0a
 ;GRMN_TYPE: Roads/UNPAVED_ROAD/Gravel or dirt road/Non NT, NT
 UseOrientation=N
-LineWidth=5
-BorderWidth=1
-Xpm="0 0 2 0"
-"1 c #CCEEFF"
-"2 c #0000FF"
+
+Xpm="32 5 2 1"
+"! c #064e00"
+"# c #56e549"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!############!!!!############"
+"!!!!############!!!!############"
+"!!!!############!!!!############"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+
+;Xpm="0 0 2 0"
+;"1 c #CCEEFF"
+;"2 c #0000FF"
+
 String=Motomap Unpaved Road
 ExtendedLabels=Y
 FontStyle=SmallFont
@@ -1078,11 +1088,19 @@ CustomColor=No
 type=0x010e01
 ;GRMN_TYPE: Roads/RESIDENTIAL/Residential street, these are typically the most numerous roads in a detailed city map and do not show up until the user is zoomed in quite far/Non NT, NT
 UseOrientation=N
-LineWidth=2
-BorderWidth=0
-Xpm="0 0 2 0"
-"1 c #0000FF"
-"2 c #0000FF"
+
+Xpm="32 2 2 1"
+"! c #064e00"
+"# c #56e549"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!############!!!!############"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+
+;Xpm="0 0 2 0"
+;"1 c #0000FF"
+;"2 c #0000FF"
+
 String=Motomap Unpaved Road Zoom
 ExtendedLabels=Y
 FontStyle=SmallFont
@@ -1119,16 +1137,26 @@ FontStyle=SmallFont
 CustomColor=No
 [end]
 
-;motomap - trails/tracks show up in red
+;motomap - trails/tracks show up in yellow checkered pattern
 [_line]
 type=0x10
 ;GRMN_TYPE: Custom routable road 1 (Unpaved Track-thin)
 ;UseOrientation=N
-LineWidth=4
-BorderWidth=1
-Xpm="0 0 2 0"
-"1 c #FFFFFF"
-"2 c #FF0000"
+
+Xpm="32 5 2 1"
+"! c #5b5900"
+"# c #ffff00"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!############!!!!############"
+"!!!!############!!!!############"
+"!!!!############!!!!############"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+
+;Xpm="0 0 2 0"
+;"1 c #FFFFFF"
+;"2 c #FF0000"
+
 String=Motomap Trail
 ExtendedLabels=N
 FontStyle=SmallFont
@@ -1139,11 +1167,19 @@ CustomColor=No
 [_line]
 type=0x010e02
 UseOrientation=N
-LineWidth=2
-BorderWidth=0
-Xpm="0 0 2 0"
-"1 c #FF0000"
-"2 c #FF0000"
+
+Xpm="32 2 2 1"
+"! c #5b5900"
+"# c #ffff00"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+"!!!!############!!!!############"
+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+;12345678901234567890123456789012
+
+;Xpm="0 0 2 0"
+;"1 c #FF0000"
+;"2 c #FF0000"
+
 String=Motomap Unpaved Track Zoom
 ExtendedLabels=Y
 FontStyle=SmallFont

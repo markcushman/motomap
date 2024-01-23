@@ -8,9 +8,8 @@ exec 2>&1
 # if we are on MacOS then alias the date command to gdate
 # install the coreutils package to get this: brew install coreutils
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-   date () { gdate "$@"; }
-   type date
+if [[ $(uname) -eq Darwin ]]; then
+   date() { gdate "$@"; }
 fi
 
 #record our start date/time
@@ -62,7 +61,7 @@ java -Xms$memmin -Xmx$memmax -jar splitter/splitter.jar --output-dir="working/" 
 
 echo "INFO: Motomap Processing - Generating Map"
 # gen the .img file from the split files
-java -Xms$memmin -Xmx$memmax -jar mkgmap/mkgmap.jar --mapname="$mapname" --family-id="$familyid" --family-name="Motomap - $mapdesc" --description="Motomap - $mapdesc" --output-dir=working/ -c motomap/motomap.cfg working/6324*.osm.pbf motomap/typ/motomap_typ.txt
+java -Xms$memmin -Xmx$memmax -jar mkgmap/mkgmap.jar --mapname="$mapname" --family-id="$familyid" --family-name="Motomap - $mapdesc" --description="Motomap - $mapdesc" --output-dir=working/ --precomp-sea=precomp-sea/sea-latest.zip --generate-sea --route --housenumbers -c motomap/motomap.cfg working/6324*.osm.pbf motomap/typ/motomap_typ.txt
 mv working/gmapsupp.img $outputfile
 
 # clean up
