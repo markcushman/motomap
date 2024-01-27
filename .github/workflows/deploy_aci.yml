@@ -32,17 +32,4 @@ jobs:
             mv sea-latest.zip precomp-sea/sea-latest.zip
             docker build . -t ${{ secrets.REGISTRY_SERVER }}/motomap:${{ github.sha }} -t ${{ secrets.REGISTRY_SERVER }}/motomap:latest
             az acr repository untag --name ${{ secrets.REGISTRY_SERVER }} --image motomap:latest
-            docker push --all-tags ${{ secrets.REGISTRY_SERVER }}/motomap
-
-#        - name: 'Deploy to Azure Container Instances'
-#          uses: 'azure/aci-deploy@v1.1.3'
-#          with:
-#            resource-group: ${{ secrets.RESOURCE_GROUP }}
-#            dns-name-label: url-for-container
-#            image: ${{ secrets.REGISTRY_SERVER }}/motomap:${{ github.sha }}
-#            cpu: 1   #Optional
-#            memory: 1   #Optional
-#            registry-username: ${{ secrets.REGISTRY_USERNAME }}
-#            registry-password: ${{ secrets.REGISTRY_PASSWORD }}
-#            name: motomap-app-container
-#            location: 'Central US'           
+            docker push --all-tags ${{ secrets.REGISTRY_SERVER }}/motomap    
