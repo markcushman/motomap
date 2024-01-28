@@ -4,6 +4,7 @@ mkgmap/
 azure/
 test/*.img
 test/georgia*
+test/us*
 precomp-sea/
 
 # Azurite artifacts
